@@ -93,10 +93,10 @@ function ListForecastItem(props) {
         <div className={"row col-12 py-1 uniform" + period}>
             <img src={image} alt={props.snippet + "image"} className="bg-img fill col-2" />
             <h1 className="col-2 end-line align-content-center fill"><strong>{date}</strong></h1>
-            <h1 className="col-2 end-line align-content-center fill"><strong>{props.temp}</strong></h1>
+            <h1 className="col-1 no-pad end-line align-content-center fill"><strong>{props.temp}</strong></h1>
             <h4 className="col-3 end-line align-content-center fill">{props.name}</h4>
-            <div className="col-3 fill row">
-                <p className="col-12 text-nowrap text-left fs-6">{props.snippet}</p>
+            <div className="col-4 fill row">
+                <p className="col-12 text-nowrap text-truncate text-left fs-6">{props.snippet}</p>
                 <p className="col-12 text-nowrap text-left fs-6">{props.rain}</p>                
             </div>
         </div>

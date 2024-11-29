@@ -8,7 +8,7 @@ function Footer() {
             </h2>
             <div className="col-12 text-center">
                 <h3>
-                    <strong>Jonathan Pruitt</strong>
+                    <strong className="text-expand">Jonathan Pruitt</strong>
                 </h3>
                 <h4>
                     <i>San Antonio, TX</i>
