@@ -26,8 +26,6 @@ function App() {
   const [grid, setGrid] = useState({loaded : false})
   const [forecast, setForecast] = useState({loaded : false})
   const [view, setView] = useState('tiled')
-
-  console.log(window.innerWidth)
   
   useEffect(reqBrowserCoords, [])
   useEffect(updateGrid, [coords])

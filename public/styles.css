@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    color : unset;
+}
+
 body {
     background-color: #dcdcdc;
     color: #404040;
@@ -21,6 +25,10 @@ body {
     border-width: 0 2px 0 0;
 }
 
+.fa {
+    font-size: 200%;
+}
+
 .fill {
     max-height: 100%;
     min-height: 50%;
@@ -37,6 +45,13 @@ body {
 .header {
     font-weight: bold;
     font-size: calc(3vw + 1rem);
+}
+
+#contact {
+    margin-top : 4%;
+    margin-bottom : 2%;
+    padding-top: 3%;
+    border-top : 3px solid #264d7d;
 }
 
 .hidden {
@@ -97,6 +112,10 @@ body {
     top: 100px;
     left: 10%;
     text-shadow: 3px 3px 6px #101010;
+}
+
+.text-underline {
+    border-bottom: 2px solid #264d7d;
 }
 
 .fixed-arrow {
