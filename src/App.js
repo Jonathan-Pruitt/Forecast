@@ -26,10 +26,17 @@ function App() {
   const [grid, setGrid] = useState({loaded : false})
   const [forecast, setForecast] = useState({loaded : false})
   const [view, setView] = useState('tiled')
+
+  console.log(window.innerWidth)
   
   useEffect(reqBrowserCoords, [])
   useEffect(updateGrid, [coords])
   useEffect(updateForecast, [grid])
+  useEffect(() => {
+    if (window.innerWidth < 575) {
+      setView('list')
+    }
+  }, [])
   
   function reqBrowserCoords() {
     if (navigator.geolocation) {
@@ -60,6 +67,11 @@ function App() {
             })
           } catch(error) {
             console.error("Provided coordinates appear to be outside of the scope of the USA National Weather Service\n",error)
+            setGrid({
+              loaded : false,
+              city : 'ERROR',
+              state : "Unable to load forecast. The National Weather Service only provides forecasts within the U.S.A."
+            })
           }
         })
       } catch(err) {
