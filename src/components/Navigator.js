@@ -9,6 +9,11 @@ function Navigator(props) {
         setIsDropdown(state => !state)
     }//end method
 
+    function handleSearch() {
+        props.search(true)
+        handleIsDropdown()
+    }
+
     return (
         <div className="fixed-top">
             <nav className="navbar navbar-expand-lg navbar-light">
@@ -23,6 +28,7 @@ function Navigator(props) {
                         <ViewSelector toggleDrop={handleIsDropdown} view={props.view} link="#" title="Tiled View"/>
                         <ViewSelector toggleDrop={handleIsDropdown} view={props.view} link="#" title="List View"/>
                         <NavItem toggleDrop={handleIsDropdown} link="#contact" title="Contact"/>
+                        <SearchPrompt title="Search" link="#" search={handleSearch}/>                        
                     </ul>
                 </div> {/* CLOSING BRACE FOR 'isDropdown' */}
             </nav>
@@ -38,6 +44,18 @@ function NavItem(props) {
     return (
         <li className="nav-item">
             <a onClick={dropToggle} className="nav-link" href={link}><strong>{title}</strong></a>
+        </li>
+    )
+
+}//end method
+
+function SearchPrompt(props) {
+    let link = props.link
+    let title = props.title
+
+    return (
+        <li className="nav-item">
+            <a onClick={props.search} className="nav-link" href={link}><strong>{title} &#x1F50E;&#xFE0E;</strong></a>
         </li>
     )
 

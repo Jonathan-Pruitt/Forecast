@@ -27,6 +27,7 @@ function App() {
   const [grid, setGrid] = useState({loaded : false})
   const [forecast, setForecast] = useState({loaded : false})
   const [view, setView] = useState('tiled')
+  const [isSearching, setIsSearching] = useState(false)
   
   useEffect(reqBrowserCoords, [])
   useEffect(updateGrid, [coords])
@@ -107,14 +108,14 @@ function App() {
 
   return (
     <div id="top" className="container">
-      <Navigator view={setView}/>
+      <Navigator view={setView} search={setIsSearching}/>
       <div className="row d-flex justify-content-center post-nav">
         <Header location={grid}/>
-        <GeoSearch />
         {forecast.loaded !== false && <Forecast periods={forecast} view={view}/>}
       </div>
       <Footer />
       <TopIcon />
+      {isSearching && <GeoSearch reset={setIsSearching}/>}
     </div>
   );
 }
