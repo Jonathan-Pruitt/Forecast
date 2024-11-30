@@ -2,7 +2,7 @@ function Footer() {
     return (
         <div className="crawl row d-flex justify-content-center">
             <h2 id="contact" className="col-12 text-center">
-                <strong className="text-underline">
+                <strong className="txt-underline">
                     Contact Me
                 </strong>
             </h2>

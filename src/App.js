@@ -17,6 +17,7 @@ import Navigator from "./components/Navigator";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TopIcon from "./components/TopIcon";
+import GeoSearch from "./components/GeoSearch";
 
 import { useEffect, useState } from "react";
 
@@ -109,6 +110,7 @@ function App() {
       <Navigator view={setView}/>
       <div className="row d-flex justify-content-center post-nav">
         <Header location={grid}/>
+        <GeoSearch />
         {forecast.loaded !== false && <Forecast periods={forecast} view={view}/>}
       </div>
       <Footer />

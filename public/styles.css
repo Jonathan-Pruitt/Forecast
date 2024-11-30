@@ -3,11 +3,14 @@ html {
 }
 
 a {
-    color : #264d7d;    
+    color : #c0c0c0;
+    transition : .3s;
 }
 
 a:hover {
     text-decoration: none;
+    color: #909090;
+    transition : .2s;
 }
 
 body {
@@ -16,12 +19,18 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.bordered {
-    border: 1px solid red;
-}
-
 .bg-img {
     opacity: .6;
+}
+
+.crawl {
+    margin-bottom : 1%;
+    background-color: #264d7d;
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: #f0f0f0;
+    text-shadow: 0 0 5px #101010;
 }
 
 .end-line {
@@ -49,10 +58,10 @@ body {
 .header {
     font-weight: bold;
     font-size: calc(3vw + 1rem);
+    text-shadow: 0 0 10px #ffffff;
 }
 
 #contact {
-    margin-top : 4%;
     margin-bottom : 2%;
     padding-top: 3%;
     border-top : 3px solid #264d7d;
@@ -75,6 +84,10 @@ body {
     overflow: visible;
 }
 
+.txt-underline {
+    text-decoration: underline;
+}
+
 .no-pad {
     padding : 0;
 }
@@ -95,6 +108,7 @@ body {
 
 .post-nav {
     padding : 100px 0 0 0;
+    margin-bottom : 4%;
 }
 
 .uniform {
@@ -137,15 +151,21 @@ body {
     text-shadow: 3px 3px 6px #101010;
 }
 
-.text-underline {
-    border-bottom: 2px solid #264d7d;
-}
-
 .fixed-arrow {
     position: fixed;
     right: 5px;
     bottom: 5px;
     z-index: 1030;
+}
+
+.arrow-hide {
+    opacity : 0;
+    transition : .3s;
+}
+
+.arrow-show {
+    opacity: 1;
+    transition : .7s;
 }
 
 .btn-up {
